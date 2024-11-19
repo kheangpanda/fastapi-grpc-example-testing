@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package clients;
+
+service Clients {
+  rpc Add (AddRequest) returns (AddResponse);
+}
+
+message AddRequest {
+  string firstName = 1;
+  string lastName = 2;
+  string gender = 3;
+}
+
+message AddResponse {
+  string fullname = 1;
+}
